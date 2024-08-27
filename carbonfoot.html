@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="carcss.css">
+</head>
+<body>
+    <header>
+        <div class="main_nav">
+            <a href="index.html" class="logo">Wanderers</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Intro</a></li>
+                    <li><a href="intro.html">Popular Places</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="calculator">
+            <h1>Carbon Footprint Calculator</h1>
+            <form id="calculator-form">
+                <label for="fuel">Fuel Consumption (liters):</label>
+                <input type="number" id="fuel" name="fuel" required>
+
+                <label for="electricity">Electricity Usage (kWh):</label>
+                <input type="number" id="electricity" name="electricity" required>
+
+                <label for="flights">Number of Flights:</label>
+                <input type="number" id="flights" name="flights" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="results"></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Dark background for the theme */
+  color: #E0E0E0; /* Light gray text for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #1f1f1f; /* Darker shade for header */
+  color: #E0E0E0;
+  text-align: center;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00bfff; /* Light blue for logo */
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #E0E0E0;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bfff; /* Light blue on hover */
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Calculator Section */
+#calculator {
+  background-color: #1f1f1f; /* Dark background for the calculator section */
+  color: #E0E0E0; /* Light gray text */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+#calculator h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #00bfff; /* Light blue for the title */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1em;
+  background-color: #333; /* Dark background for inputs */
+  color: #E0E0E0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #00bfff; /* Light blue for buttons */
+  color: #121212; /* Dark text color */
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #009fdd; /* Darker blue on hover */
+}
+
+/* Results Section */
+#results {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #333; /* Dark background for results */
+  border-radius: 5px;
+  color: #E0E0E0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-size: 1em;
+}
