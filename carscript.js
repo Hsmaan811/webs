@@ -1,29 +1,28 @@
-const calculatorForm = document.getElementById('calculator-form');
-const distanceInput = document.getElementById('distance');
-const modeSelect = document.getElementById('mode');
-const energyInput = document.getElementById('energy');
-const meatInput = document.getElementById('meat');
-const recycleCheckbox = document.getElementById('recycle');
-const calculateButton = document.getElementById('calculate');
-const resultsDiv = document.getElementById('results');
+// script.js
 
-calculateButton.addEventListener('click', calculateCarbonFootprint);
+document.getElementById('calculate').addEventListener('click', function() {
+  // Get form values
+  const distance = parseFloat(document.getElementById('distance').value);
+  const food = parseFloat(document.getElementById('food').value);
+  const flights = parseFloat(document.getElementById('flights').value);
+  const transport = document.getElementById('transport').value;
 
-function calculateCarbonFootprint() {
-  const distance = parseFloat(distanceInput.value);
-  const mode = modeSelect.value;
-  const energy = parseFloat(energyInput.value);
-  const meat = parseFloat(meatInput.value);
-  const recycle = recycleCheckbox.checked;
+  // Simplified carbon footprint calculation (factors are placeholders)
+  const distanceFactor = 0.0002; // CO2 emission per km
+  const foodFactor = 0.05; // CO2 emission per kg of food
+  const flightFactor = 0.25; // CO2 emission per flight
+  const transportFactors = {
+      car: 0.2, // CO2 emission per km by car
+      train: 0.05, // CO2 emission per km by train
+      bus: 0.1 // CO2 emission per km by bus
+  };
 
-  let carbonFootprint = 0;
+  const transportFactor = transportFactors[transport] || 0;
 
-  // Calculate carbon footprint based on distance and mode of transportation
-  if (mode === 'car') {
-    carbonFootprint += distance * 0.41; // 0.41 kg CO2 per mile
-  } else if (mode === 'plane') {
-    carbonFootprint += distance * 0.24; // 0.24 kg CO2 per mile
-  } else if (mode === 'train') {
-    carbonFootprint += distance * 0.14; // 0.14 kg CO2
-  }
-}
+  const carbonFootprint = (distance * transportFactor) +
+                          (food * foodFactor) +
+                          (flights * flightFactor);
+
+  // Display the result
+  document.getElementById('footprint-result').innerText = `${carbonFootprint.toFixed(2)} tons`;
+});
