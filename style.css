@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: white;
+    background: #7b61ff;
     color: black;
     border-radius: 5px;
 }
@@ -68,8 +68,8 @@ nav ul li a:hover {
 }
 
 .intro-text-content {
-    font-size: 36px;
-    color: #333;
+    font-size: 42px;
+    color: #ffffff;
     opacity: 1;
     transform: translateY(20px);
     animation: fadeInUp 2s forwards;
@@ -95,7 +95,7 @@ nav ul li a:hover {
 }
 
 .tile {
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -130,8 +130,9 @@ nav ul li a:hover {
     font-weight: bold;
     display: inline-flex;
     align-items: center;
-    background-color: white;
+    background-color: #7b61ff;
     border-radius: 5px;
+    border-radius:20%/100%;
     padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
 }
@@ -141,6 +142,7 @@ nav ul li a:hover {
 }
 
 .showcase-button:hover {
-    background: black;
+    background: #6445ff;
+    
     color: white;
 }
