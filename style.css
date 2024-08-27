@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+header{
+    height: 70px;
+    display: flex;
+}
+.
+    align-items: center;
+    justify-content: space-between;main_nav{
+    width: 100%;
+    background-color: brown;
+    padding-left: 5%;
+    display: flex;
+}
+.main_nav ul{
+    list-style: none;
+    display: flex;
+}
+.main_nav ul a{
+    text-transform: capitalize;
+    padding-right: 20px ;
+    transition: all 0.3s ease;
+}
+.main_nav ul a:hover{
+    color: #ccc;
+    transform: scale(1.1);
+}
+.main_nav ul a:active{
+    color: #fff;
+    transform: scale(0.9);
+}
+.logo{
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+.logo:hover{
+    color: #ccc;
+    transform: scale(1.1);
+}
