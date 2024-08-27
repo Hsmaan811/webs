@@ -79,7 +79,37 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Keep dropdown open when hovering over Tools or the dropdown content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
 
 /* Trending Places Section */
 .trending-places {
@@ -163,3 +193,4 @@ nav ul li a:hover {
     height: 50px;
     fill: #333;
   }
+  

@@ -1,50 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ensures body and html take up the full height */
+    background-image: url(Imgs/tools.jpg); /* Path to your background image */
+    background-size: cover; /* Makes the image cover the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 20;
+    background: none;
+    color: white;
+}
+
+header {
+    background: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.main_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #7b61ff;
+    color: black;
+    border-radius: 5px;
+}
+.tile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tile {
+  background-color: rgba(255 ,255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+}
+
+.tile h2 {
+  margin-bottom: 10px;
+}
+
+.tile p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.tile img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.tile button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tile button:hover {
+  background-color: #0056b3;
+}
+</style>
 </head>
 <body>
+
     <header>
         <div class="main_nav">
             <a href="index.html" class="logo">Wanderers</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Intro</a></li>
-                    <li><a href="intro.html">Popular places</a></li>
-                    <li><a href="intro.html">Tools</a></li>
+                  <li><a href="intro.html">Popular places</a></li>
+                  <li><a href="Tools.html">Tools</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div class="card">
-          <svg class="icon icon-plane" viewBox="0 0 100 50">
-            <path d="M 25 25 L 75 25 L 50 40 L 25 25" />
-          </svg>
-          <h3>Flight Services</h3>
-          <p>Arrival and Departure</p>
-        </div>
-        <div class="card">
-          <svg class="icon icon-food" viewBox="0 0 100 100">
-            <path d="M 50 20 L 60 80 L 40 80 L 50 20" />
-            <path d="M 30 20 L 70 20" />
-          </svg>
-          <h3>Food Services</h3>
-          <p>Catering</p>
-        </div>
-        <div class="card">
-          <svg class="icon icon-bus" viewBox="0 0 100 50">
-            <path d="M 20 10 L 80 10 L 80 40 L 20 40 L 20 10" />
-            <path d="M 30 20 L 70 20" />
-            <path d="M 25 30 L 75 30" />
-          </svg>
-          <h3>Travel Services</h3>
-          <p>Pick-up/drop</p>
-        </div>
-      </div>
+    <section>
+        <h1><b>Helping Tools</b></h1><br>
+    </section>
+    
+
+<div class="tile-container">
+  <div class="tile">
+    <h2>Currency converter</h2>
+    <img src="https://www.svgrepo.com/show/141440/airplane-black.svg" alt="Airplane icon">
+    <p>convert one Currency to another</p>
+    <button>Use</button>
+  </div>
+  <div class="tile">
+    <h2>Carbon emmiter</h2>
+    <img src="https://www.svgrepo.com/show/303226/cutlery.svg" alt="Cutlery icon">
+    <p></p>
+    <button>Use</button>
+  </div>
+  <div class="tile">
+    <h2>eee</h2>
+    <img src="https://www.svgrepo.com/show/348352/bus.svg" alt="Bus icon">
+    <p>Pick-up/drop</p>
+    <button>Learn More</button>
+  </div>
+</div>
+
 </body>
 </html>
