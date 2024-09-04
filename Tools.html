@@ -26,16 +26,17 @@ body, html {
 }
 
 header {
-    background: rgba(255, 255, 255, 0);
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10;
+  background: #333;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .main_nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  background-color: #333;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -53,7 +54,9 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+
+    margin: 0;
+    flex-grow: 1;
 }
 
 nav ul li a {
@@ -62,11 +65,14 @@ nav ul li a {
     padding: 10px 15px;
     display: block;
     transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+    text-decoration: none;
+   
 }
 
 nav ul li a:hover {
-    background: #7b61ff;
-    color: black;
+    background: #4d9aff; /* The background color on hover */
+    color: black; /* Text color on hover */
     border-radius: 5px;
 }
 .tile-container {
@@ -126,6 +132,8 @@ nav ul li a:hover {
                     <li><a href="index.html">Intro</a></li>
                   <li><a href="intro.html">Popular places</a></li>
                   <li><a href="Tools.html">Tools</a></li>
+                  <li><a href="tu.html">Activities</a></li>
+                  <li><a href="t.html">Sustainable tourism</a></li>
                 </ul>
             </nav>
         </div>
@@ -138,21 +146,21 @@ nav ul li a:hover {
 <div class="tile-container">
   <div class="tile">
     <h2>Currency converter</h2>
-    <img src="https://www.svgrepo.com/show/141440/airplane-black.svg" alt="Airplane icon">
+    <img src="Imgs/currencyexchange.jpg" alt="">
     <p>convert one Currency to another</p>
     <button><li><a href="Currencyconverter.html">use</a></li></button>
   </div>
   <div class="tile">
     <h2>Carbon emmiter</h2>
-    <img src="https://www.svgrepo.com/show/303226/cutlery.svg" alt="Cutlery icon">
+    <img src="Imgs/CARBON1.jpg" alt="">
     <p></p>
-    <button><li><a href="carbonfoot.html">use</a></li></button>
+    <button><li><a href="carbonfoot.html" style="text-decoration: none;">use</a></li></button>
   </div>
   <div class="tile">
-    <h2>eee</h2>
-    <img src="https://www.svgrepo.com/show/348352/bus.svg" alt="Bus icon">
+    <h2>Feedback</h2>
+    <img src="Imgs/feedback.jpg" alt="">
     <p>Pick-up/drop</p>
-    <button><li><a href="">use</a></li></button>
+    <button><li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeEMAIGDrFAzValH1yvhpNqxeLQfImZrbDHU0HiodRUa73F3g/viewform?vc=0&c=0&w=1&flr=0"">use</a></li></button>
   </div>
 </div>
 

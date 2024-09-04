@@ -3,11 +3,17 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100%; /* Ensures body and html take up the full height */
+    width: 100%; /* Ensure the width is always 100% */
+    height: 100%; /* Ensure the height is always 100% */
+    box-sizing: border-box;
+    overflow-x: hidden;
     background-image: url(Imgs/earth.png); /* Path to your background image */
     background-size: cover; /* Makes the image cover the entire page */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed;
+    background-color: #F5F5F5; /* Light Gray from Modern Minimalist theme */
+    color: #333333;
 }
 
 header {
@@ -38,7 +44,9 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+
+    margin: 0;
+    flex-grow: 1;
 }
 
 nav ul li a {
@@ -47,14 +55,16 @@ nav ul li a {
     padding: 10px 15px;
     display: block;
     transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+    text-decoration: none;
+   
 }
 
 nav ul li a:hover {
-    background: #7b61ff;
-    color: black;
+    background: #4d9aff; /* The background color on hover */
+    color: black; /* Text color on hover */
     border-radius: 5px;
 }
-
 .intro-text {
     display: flex;
     justify-content: center;
@@ -88,19 +98,23 @@ nav ul li a:hover {
 
 .content-tiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts the number of columns based on screen size */
+    gap: 5px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0); /* Optional: Slight background to distinguish from the main background */
+    padding-left: 10px ;
 }
 
 .tile {
-    background: rgba(255, 255, 255, 0.7);
+    background-color: rgb(255,255,255,0.7); /* White for tiles */
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensures the tile width is 100% within its grid cell */
+    max-width: 100%; /* Prevents overflow */
 }
 
 .tile img {
@@ -112,13 +126,21 @@ nav ul li a:hover {
 .tile h3 {
     margin: 10px 0;
     font-size: 24px;
+    text-decoration: none;
+    color: #007ACC;
+
 }
 
 .tile p {
     font-size: 16px;
-    color: #666;
+    text-decoration: none;
+    color: inherit;
 }
-
+.tile:hover {
+    transform: translateY(-10px); /* Lifts the tile on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+    background-color: #F0F0F0
+}
 .linkg {
     text-align: center;
     margin-top: 20px;
@@ -126,11 +148,12 @@ nav ul li a:hover {
 
 .showcase-button {
     text-decoration: none;
-    color: black;
+    background-color: #007ACC; /* Bright Blue for buttons */
+    color: #FFFFFF; 
     font-weight: bold;
     display: inline-flex;
     align-items: center;
-    background-color: #7b61ff;
+
     border-radius: 5px;
     border-radius:20%/100%;
     padding: 10px 15px;
@@ -142,34 +165,42 @@ nav ul li a:hover {
 }
 
 .showcase-button:hover {
-    background: #6445ff;
+    background-color: #005A9E;
     
     color: white;
 }
-/* Dropdown Menu */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    z-index: 1;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.tile h3, .tile p {
+    font-family: 'Poppins', sans-serif; /* Custom font for a modern look */
+    color: #333; /* Darker color for better contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background 0.3s ease;
+.tile h3 {
+    font-size: 24px;
+    font-weight: 600; /* Bold for headings */
+    margin: 10px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+.tile p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555; /* Softer color for secondary text */
+    margin-top: 5px;
+    transition: color 0.3s ease;
 }
 
-/* Show the dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+.tile a {
+    text-decoration: none; /* Remove underline */
+    color: #007ACC; /* Stylish blue link color */
+    font-weight: 600; /* Make links bolder */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tile a:hover {
+    color: #005A9E; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
 }

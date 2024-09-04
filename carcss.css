@@ -11,7 +11,7 @@ body, html {
 }
 
 header {
-  background: rgba(255, 255, 255, 0);
+  background: #333;
   padding: 10px 20px;
   position: relative;
   z-index: 10;
@@ -19,6 +19,7 @@ header {
 
 .main_nav {
   display: flex;
+  background-color: #333;
   justify-content: space-between;
   align-items: center;
 }
@@ -37,7 +38,9 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+
+  margin: 0;
+  flex-grow: 1;
 }
 
 nav ul li a {
@@ -46,14 +49,16 @@ nav ul li a {
   padding: 10px 15px;
   display: block;
   transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+ 
 }
 
 nav ul li a:hover {
-  background: #7b61ff;
-  color: black;
+  background: #4d9aff; /* The background color on hover */
+  color: black; /* Text color on hover */
   border-radius: 5px;
-}/* General resets */
-
+}
 
 .calculator-section {
   background-color: #f7f7f7;
